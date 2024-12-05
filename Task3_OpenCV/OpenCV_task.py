@@ -13,7 +13,6 @@ while True:
 
     blank = np.zeros(frame.shape, dtype='uint8')
     cv.imshow('Contours Drawn', blank)
-    
 
     if cv.waitKey(15) & 0xFF == ord('q'):
         break
