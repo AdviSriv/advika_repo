@@ -14,4 +14,4 @@ def div_string(string,num):
 
 s="abcdabcdabcdabcd"
 n= int(input("Enter the number of divisions: "))
-print(div_string(s,n))
+div_string(s,n)
