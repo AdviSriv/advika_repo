@@ -1,17 +1,19 @@
-num= input("Enter the number: ")
-l= len(num)
-for i in range(0,l):
-    if num[i]>num[i+1]:
-        break
-peak_index= i
-print("The peak value is at index: ")
-print(peak_index)
+num = input("Enter the number: ")
+l = len(num)
 
-for i in range(peak_index,l-1):
-    if num[i]<num[i+1]:
+peak_index = 0
+for i in range(1, l):
+    if num[i] > num[peak_index]:
+        peak_index = i
+        
+for i in range(1, peak_index):
+    if num[i] <= num[i - 1]:
+        print("Not a hill number.")
         break
-
-if i==l-2:
-    print("It is a hill number.")
 else:
-    print("Not a hill number.")
+    for i in range(peak_index + 1, l):
+        if num[i] >= num[i - 1]:
+            print("Not a hill number.")
+            break
+    else:
+        print("It is a hill number.")
