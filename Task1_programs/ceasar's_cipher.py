@@ -10,7 +10,7 @@ def encrypt(text,key):
             else:
                 new_index=index-key
                 if new_index<=0:
-                    new_index=new_index-26
+                    new_index=new_index+26
                 cipher=cipher+letters[new_index]
     return cipher
 
