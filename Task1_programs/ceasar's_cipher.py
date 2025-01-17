@@ -8,10 +8,8 @@ def encrypt(text,key):
             if index==-1:
                 cipher=cipher+i
             else:
-                new_index=index-key
-                if new_index<=0:
-                    new_index=new_index+26
-                cipher=cipher+letters[new_index]
+                new_index = (index - key) % 26
+                cipher += letters[new_index]
     return cipher
 
 k=int(input('Enter the key: '))
